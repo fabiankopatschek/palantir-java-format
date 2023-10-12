@@ -4,7 +4,7 @@ Bundle-Name: palantir-java-format
 Bundle-SymbolicName: palantir-java-format-eclipse-plugin;singleton:=true
 Bundle-Version: 2.38.0
 Bundle-RequiredExecutionEnvironment: JavaSE-17
-Require-Bundle: org.eclipse.jdt.core;bundle-version="3.10.0",
+Require-Bundle: org.eclipse.jdt.core,
  org.eclipse.jface,
  org.eclipse.text,
  org.eclipse.ui,
@@ -12,4 +12,5 @@ Require-Bundle: org.eclipse.jdt.core;bundle-version="3.10.0",
 Bundle-ClassPath: .,
  lib/guava.jar,
  lib/palantir-java-format.jar,
- lib/palantir-java-format-spi.jar
+ lib/palantir-java-format-spi.jar,
+ lib/functionaljava.jar

@@ -67,6 +67,18 @@
 		    <artifactId>org.eclipse.jdt.core</artifactId>
 		    <version>3.35.0</version>
 		</dependency>
+		<!-- transitive palantir dependencies, which are not included -->
+		<dependency>
+			<groupId>org.functionaljava</groupId>
+			<artifactId>functionaljava</artifactId>
+			<version>4.8</version>
+			<exclusions>
+				<exclusion>
+					<groupId>com.h2database</groupId>
+					<artifactId>h2</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
 	</dependencies>
 	<build>
 		<plugins>
@@ -89,7 +101,7 @@
 						<stripVersion>true</stripVersion>
 						<overWriteReleases>true</overWriteReleases>
 						<overWriteSnapshots>true</overWriteSnapshots>
-						<includeArtifactIds>guava,palantir-java-format,palantir-java-format-spi</includeArtifactIds>
+						<includeArtifactIds>guava,palantir-java-format,palantir-java-format-spi,functionaljava</includeArtifactIds>
 					</configuration>
 				</plugin>
 				<plugin>
